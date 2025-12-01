@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 
 export default function WireView({ envelope }: { envelope: any }) {
   const meta = envelope?.meta ?? {};

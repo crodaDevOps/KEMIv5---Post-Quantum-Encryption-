@@ -21,7 +21,10 @@ function toHex(buf: ArrayBuffer) {
 }
 
 export async function sha256(input: Uint8Array | ArrayBuffer) {
-  const data = input instanceof ArrayBuffer ? input : input.buffer ? input : new Uint8Array(input);
+  // The input is copied into a new Uint8Array to ensure the underlying buffer
+  // is a standard ArrayBuffer, not a SharedArrayBuffer, which is not
+  // supported by crypto.subtle.digest.
+  const data = input instanceof ArrayBuffer ? input : new Uint8Array(input);
   return window.crypto.subtle.digest("SHA-256", data);
 }
 

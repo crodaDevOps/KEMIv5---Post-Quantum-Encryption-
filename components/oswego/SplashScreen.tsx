@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from "framer-motion";
 import LatticePulse from '../hero/LatticePulse';
 import LogoCluster from '../hero/LogoCluster';

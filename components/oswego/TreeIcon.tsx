@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const TreeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="none"
        stroke="var(--ink,#1E4D38)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

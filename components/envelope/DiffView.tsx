@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { jsonDiff } from "../../lib/envelopeUtils";
 import { motion } from "framer-motion";
 

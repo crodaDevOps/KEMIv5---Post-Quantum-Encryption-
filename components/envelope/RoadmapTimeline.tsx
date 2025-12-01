@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const milestones = [
@@ -13,7 +13,7 @@ export default function RoadmapTimeline() {
     <div className="p-4 border border-neutral-800 bg-neutral-900 mt-4">
       <div className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-3">Engineering Roadmap</div>
       <div className="space-y-1">
-        {milestones.map((m, i) => (
+        {milestones.map((m) => (
           <div key={m.id} className="border-l border-neutral-800 pl-4 py-2 relative">
             <div className="absolute -left-[3px] top-3 w-1.5 h-1.5 bg-neutral-700 rounded-full"></div>
             <div className="flex-1">

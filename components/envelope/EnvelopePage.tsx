@@ -1,4 +1,3 @@
-import React from "react";
 import InteractiveEnvelope from "./InteractiveEnvelope";
 import { MotionFade } from "../oswego/MotionFade";
 

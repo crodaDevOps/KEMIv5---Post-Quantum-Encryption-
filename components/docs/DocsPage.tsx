@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MotionFade } from "../oswego/MotionFade";
 import WhitepaperModal from "../envelope/WhitepaperModal";
 import { Section } from "../oswego/Section";
