@@ -1,4 +1,3 @@
-import React from "react";
 import { estimateEnvelopeSize } from "../../lib/envelopeUtils";
 
 export default function SizeEstimator({ envelope, plaintext }: { envelope: any; plaintext: string }) {

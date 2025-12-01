@@ -110,10 +110,10 @@ export default function App() {
                                     <div className="w-2 h-2 rounded-full bg-green-500/20"></div>
                                  </div>
                                  <code className="text-node text-[10px] font-mono leading-loose">
-                                   $ oswegoctl envelope inspect msg.bin<br/>
-                                   <span className="text-coral">> [OK]</span> ML-KEM-768 Encap<br/>
-                                   <span className="text-coral">> [OK]</span> ML-DSA-65 Sig Valid<br/>
-                                   <span className="text-leaf">> Payload:</span> 1.4kb encrypted
+                                   $ oswegoctl envelope inspect msg.bin<br />
+                                   <span className="text-coral">{'>'} [OK]</span> ML-KEM-768 Encap<br />
+                                   <span className="text-coral">{'>'} [OK]</span> ML-DSA-65 Sig Valid<br />
+                                   <span className="text-leaf">{'>'} Payload:</span> 1.4kb encrypted
                                  </code>
                               </div>
                               <p className="text-xs text-neutral-500 font-mono">

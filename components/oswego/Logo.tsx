@@ -1,4 +1,3 @@
-import React from 'react';
 import { TreeIcon } from "./TreeIcon";
 import { LatticeIcon } from "./LatticeIcon";
 

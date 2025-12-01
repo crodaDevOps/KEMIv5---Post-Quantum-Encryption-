@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ControlsAdvanced from "./ControlsAdvanced";
 import EnvelopeCanvasAdvanced from "./EnvelopeCanvasAdvanced";
 import WireView from "./WireView";
@@ -143,7 +143,7 @@ export default function InteractiveEnvelope() {
       </div>
 
       {/* 3. Envelope Module (KeyGen, Encapsulate, etc) */}
-      <EnvelopeCanvasAdvanced stage={stage} envelope={envelope} faultEnabled={faultEnabled} />
+      <EnvelopeCanvasAdvanced stage={stage} envelope={envelope} />
 
       {/* 4. Payload Transformation Diff */}
       <DiffView before={{ payload }} after={envelope?.assembled ?? {}} />

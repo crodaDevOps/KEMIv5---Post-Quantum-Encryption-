@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { short } from "../../lib/envelopeUtils";
 import { TreeIcon } from "../oswego/TreeIcon";
@@ -8,11 +7,9 @@ import { LatticeIcon } from "../oswego/LatticeIcon";
 export default function EnvelopeCanvasAdvanced({
   stage,
   envelope,
-  faultEnabled,
 }: {
   stage: number;
   envelope: any;
-  faultEnabled: boolean;
 }) {
   const steps = [
     { id: "keygen", label: "KeyGen", icon: <TreeIcon /> },
@@ -46,7 +43,7 @@ export default function EnvelopeCanvasAdvanced({
                 <div>
                   <div className={`text-[10px] uppercase tracking-wider font-bold ${active ? "text-white" : "text-neutral-500"}`}>{s.label}</div>
                   <div className="text-[10px] text-neutral-400 mt-1 font-mono truncate">
-                    {renderMiniDetail(s.id, envelope, faultEnabled)}
+                    {renderMiniDetail(s.id, envelope)}
                   </div>
                 </div>
               </div>
@@ -70,7 +67,7 @@ export default function EnvelopeCanvasAdvanced({
   );
 }
 
-function renderMiniDetail(id: string, envelope: any, fault: boolean) {
+function renderMiniDetail(id: string, envelope: any) {
   switch (id) {
     case "keygen":
       return envelope?.keypair ? `Pub: ${short(envelope.keypair.publicKey)}` : "Wait: ML-KEM KeyGen";

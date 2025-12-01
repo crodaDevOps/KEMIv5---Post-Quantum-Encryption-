@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const FlaskIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="none"
        stroke="#0E1A2E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
