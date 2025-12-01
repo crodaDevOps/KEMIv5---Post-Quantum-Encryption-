@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# OswegoLabs — Post-Quantum Infrastructure
 
-# Run and deploy your AI Studio app
+OswegoLabs is a specialized UI and simulation environment demonstrating high-assurance, post-quantum cryptography (PQC) workflows for distributed systems (Kafka, NATS, gRPC).
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1vp5v4JRdwkeW7MBHprCZCndnpl1EikjR
+- **Interactive Envelope Simulator**: Visualizes the KEMIv5.15 lifecycle (KeyGen, Encapsulation, Signing, Encryption).
+- **Lattice Visualization**: Abstract representation of lattice-based cryptography.
+- **Fault Injection**: Tools to corrupt payloads and verify tamper-evidence.
+- **Metrics**: Real-time payload overhead estimation and wire transport analysis.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Framework**: React 18 (SPA structure)
+- **Styling**: TailwindCSS (Industrial/Dark Mode configuration)
+- **Animation**: Framer Motion
+- **Icons**: Custom SVG set (Tree, Lattice, Flask)
+- **Build/Deploy**: Vite-compatible structure / Vercel ready
 
+## Project Structure
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- `/components`: UI components organized by domain (`envelope`, `hero`, `oswego`).
+- `/lib`: Simulation utilities (`cryptoSim.ts`) and helpers.
+- `App.tsx`: Main routing and layout logic.
+
+## Deployment
+
+### Docker
+
+Build the container:
+
+```bash
+docker build -t oswego-labs .
+docker run -p 8080:80 oswego-labs
+```
+
+### Vercel
+
+The project includes a `vercel.json` configured for SPA routing. Connect your repository and deploy with default settings.
+
+## Accessibility
+
+This application targets WCAG 2.1 AA compliance:
+- Semantic HTML structure.
+- High contrast "Charcoal & Coral" theme.
+- ARIA labels for interactive simulation controls.
+- Reduced motion preferences respected (via OS settings).
+
+---
+© 2024 OswegoLabs Inc. FIPS-203/204 Compliance.
